@@ -1,0 +1,7 @@
+.weatherPage{
+    height: calc(100vh - 56px);
+    background: linear-gradient(#e66465, #9198e5);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}

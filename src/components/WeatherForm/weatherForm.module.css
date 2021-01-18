@@ -1,0 +1,20 @@
+.form{
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.defaultCities{
+    margin: 0;
+    padding: 0;
+    margin-bottom: 5px;
+    display: flex;
+    list-style: none;
+
+}
+
+.defaultCities li{
+    border: 1px solid #000;
+    cursor: pointer;
+    padding: 3px 5px;
+    border-radius: 5px;
+}

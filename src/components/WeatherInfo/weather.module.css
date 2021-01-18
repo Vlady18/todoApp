@@ -1,0 +1,16 @@
+.weatherInfo{
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.weatherInfo ul{
+    padding: 0;
+    list-style: none;
+}
+
+.weatherInfo h5{
+    font-size: 28px;
+    margin: 0;
+    color: #ffffff;
+}

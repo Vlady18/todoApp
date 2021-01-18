@@ -1,0 +1,9 @@
+export const ADD_NOTE = 'ADD_NOTE';
+export const REMOVE_NOTE = 'REMOVE_NOTE';
+export const FETCH_NOTE = 'FETCH_NOTE';
+export const TOGGLE_LOADER = 'TOGGLE_LOADER';
+export const EDIT_NOTE = 'EDIT_NOTE';
+export const SHOW_EDIT = 'SHOW_EDIT';
+export const HIDE_EDIT = 'HIDE_EDIT';
+export const FILTER_NOTE = 'FILTER_NOTE';
+export const CHANGE_PROPERTY = 'CHANGE_PROPERTY';

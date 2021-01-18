@@ -2,36 +2,35 @@ import React, {useContext, useState} from 'react'
 import {AlertContext} from "../context/alert/alertContext";
 import {NotesContext} from "../context/Notes/notesContext";
 
-export const Form = (props)=>{
+export const TodoForm = (props)=>{
 
     const {addNote} = useContext(NotesContext)
 
     const [value, setValue] = useState('')
 
-    const alert = useContext(AlertContext)
+    const {alert, hide, show} = useContext(AlertContext)
 
     const submitHandler = (e) =>{
         e.preventDefault();
         if(value.trim() !== '' ) {
+            hide();
             addNote(value.trim());
-            alert.show('Заметка успешно добавлена!', 'success')
-
         } else{
-            alert.show('Добавьте текст заметки', 'warning')
+            show('Add note text', 'warning')
         }
         let hideAlert = setTimeout(()=>{
-            alert.hide();
+            hide();
         }, 5000)
         setValue('')
     }
     return(
         <form onSubmit={submitHandler}>
-            <div className="form-group">
-                <label htmlFor="exampleInputEmail1">Текст заметки</label>
-                <input type="text" className="form-control" value={value} onChange={(e)=>setValue(e.target.value)} />
-                    <small id="emailHelp" className="form-text text-muted">Вы сможете отредактирвоать или удалить её позже.</small>
+            <div className="input-group mb-3">
+                <input type="text" className="form-control" placeholder="Enter your note text" value={value} onChange={(e)=>setValue(e.target.value)} />
+                <div className="input-group-append">
+                    <button className="btn btn-primary" type="submit" id="button-addon2">Add</button>
+                </div>
             </div>
-            <button type="submit" className="btn btn-primary">Submit</button>
         </form>
     )
 }

@@ -1,0 +1,16 @@
+.head_burger{
+    font-size: 20px;
+    color: #fff;
+    display: none;
+}
+
+.head_burger.active{
+    position: absolute;
+    right: 220px;
+}
+
+@media all and (max-width: 992px) {
+    .head_burger{
+        display: block;
+    }
+}
